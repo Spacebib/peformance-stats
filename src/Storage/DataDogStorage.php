@@ -43,6 +43,6 @@ class DataDogStorage extends Storage
             strtolower(Arr::get($content,'method')),
             Arr::get($content,'response_status')
         );
-        $this->getStatsd()->microtiming($stat, Arr::get($content,'duration'));
+        $this->getStatsd()->timing($stat, Arr::get($content,'duration'));
     }
 }
