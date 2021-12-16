@@ -1,10 +1,11 @@
 <?php
 namespace Spacebib\PeformanceStats\Tests;
 
+use Orchestra\Testbench\TestCase as Orchestra;
+use Spacebib\PeformanceStats\PeformanceStatsServiceProvider;
 use Spacebib\PeformanceStats\Storage\Storage;
-use Tests\TestCase;
 
-class FeatureTestCase extends TestCase
+class FeatureTestCase extends Orchestra
 {
     protected function setUp(): void
     {
@@ -18,6 +19,13 @@ class FeatureTestCase extends TestCase
     public function getStoragePrefix(): string
     {
         return 'test';
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            PeformanceStatsServiceProvider::class,
+        ];
     }
 
     public function getStorageKey(

@@ -14,7 +14,6 @@ class RequestWatcherTest extends FeatureTestCase
         Route::get('/emails', function () {
             return ['email' => 'xingxiang@spacebib.com'];
         })->name("emails");
-
         $this->get('/emails')->assertSuccessful();
         $entrys = Cache::get($this->getStorageKey('request', 'emails', 'get', 200));
         $entry = Arr::first($entrys);
