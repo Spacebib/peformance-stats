@@ -6,9 +6,9 @@ use Spacebib\PeformanceStats\EntryType;
 use Spacebib\PeformanceStats\Exceptions\InvalidEntryTypeException;
 use Spacebib\PeformanceStats\IncomingEntry;
 use Spacebib\PeformanceStats\Storage\DataDogStorage;
-use Tests\TestCase;
+use Spacebib\PeformanceStats\Tests\FeatureTestCase;
 
-class DataDogStorageTest extends TestCase
+class DataDogStorageTest extends FeatureTestCase
 {
     public function getInstance(): DataDogStorage
     {

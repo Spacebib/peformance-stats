@@ -3,7 +3,6 @@ namespace Spacebib\PeformanceStats\Tests;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
 use Spacebib\PeformanceStats\IncomingEntry;
 use Spacebib\PeformanceStats\Storage\Storage;
 

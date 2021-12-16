@@ -2,9 +2,8 @@
 namespace Spacebib\PeformanceStats\Tests;
 
 use Spacebib\PeformanceStats\Storage\Storage;
-use Tests\TestCase;
 
-class PeformanceStatsServiceProviderTest extends  TestCase
+class PeformanceStatsServiceProviderTest extends FeatureTestCase
 {
     public function test_it_binds_storage_class()
     {
